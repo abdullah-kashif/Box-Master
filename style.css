@@ -105,7 +105,6 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 0.5em;
-    display: inline-block;
     width: 50vw;
 }
 
