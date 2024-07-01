@@ -66,6 +66,7 @@ img {
 header {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     font-size: 13px;
     align-items: center;
@@ -79,26 +80,32 @@ footer {
 
 .nav {
     display: flex;
+    /* border: 2px solid red; */
+    width: 100%;
     /* flex-grow: 1; */
     justify-content: space-around;
-    margin-left: 1em;
+    /* margin-left: 1em; */
 }
 
 .nav-link {
     color: var(--clr-text);
     text-transform: capitalize;
     text-decoration: none;
-    padding: 0 1em;
+    /* padding: 0 1em; */
+    font-size: 12px;
 }
 
 .social-links {
     display: flex;
     gap: 2em;
+    display: block;
 }
 
 .secondry-images {
     display: flex;
+    flex-direction: row;
     gap: 0.5em;
+    display: inline-block;
 }
 
 .social-links:hover,
