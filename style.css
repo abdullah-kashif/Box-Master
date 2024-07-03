@@ -14,13 +14,16 @@
 
 body {
     margin: 1rem;
-    padding: 0;
     background-color: var(--clr-bg-dark);
     color: var(--clr-text);
     line-height: 1.5;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
-
+.logo{
+margin:  1em auto;
+display: block;
+}
 img {
     max-width: 100%;
 }
@@ -36,9 +39,9 @@ img {
     position: relative;
     align-self: start;
     justify-self: start;
-  }
-  
-  .btn::after {
+}
+
+.btn::after {
     content: "";
     position: absolute;
     background: var(--clr-accent);
@@ -49,20 +52,20 @@ img {
     z-index: -1;
     transition: transform 175ms cubic-bezier(0.91, 0, 0.55, 1.64);
     transform-origin: bottom left;
-  }
-  
-  .btn:hover::after,
-  .btn:focus::after {
+}
+
+.btn:hover::after,
+.btn:focus::after {
     transform: scale(1.35, 1.85);
-  }
+}
 
 .title {
     color: var(--clr-accent);
     text-transform: uppercase;
+    font-size: clamp(3rem, 10vw, 12rem);
     margin: 0;
     line-height: 1;
-    font-size: clamp(3rem, 10vw, 7rem);
-}
+  }
 
 .location {
     color: var(--clr-icons);
@@ -72,58 +75,46 @@ img {
 }
 
 header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 13px;
-    align-items: center;
     margin: 2em 0;
-    
-}
-
-footer {
-    margin-top: 2rem;
 }
 
 .nav {
+    flex-grow: 1;
     display: flex;
-    /* border: 2px solid red; */
-    width: 100%;
-    /* flex-grow: 1; */
-    justify-content: space-around;
-    /* margin-left: 1em; */
+    justify-content: space-evenly;
 }
 
 .nav-link {
     color: var(--clr-text);
     text-transform: capitalize;
     text-decoration: none;
-    /* padding: 0 1em; */
-    font-size: 12px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    opacity: 200;
+    color:var(--clr-accent);
+}
+.secondry-images img{
+    width: 50%;
+}
+.secondry-images {
+    display: flex;
+    gap: 0.5em;
+}
+
+footer {
+    margin-top: 2em;
 }
 
 .social-links {
     display: flex;
     gap: 2em;
-    display: block;
 }
 
-.secondry-images {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5em;
-    width: 45vw;
-}
-
-.social-links:hover,
-.social-links:focus {
+.social-link:hover,
+.social-link:focus {
     opacity: 0.5;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-    color: var(--clr-accent);
 }
 
 @media (min-width: 800px) {
@@ -209,4 +200,4 @@ footer {
     .secondry-images {
         grid-column: 2 / 3;
     }
-}
+} 
